@@ -1,0 +1,46 @@
+<div *ngIf="isLoggedIn">
+  <p>Welcome, {{ username }}!</p>
+  <button (click)="logout()">Logout</button>
+</div>
+
+<ul>
+  <li *ngFor="let t of topics">
+    {{ t }}
+  </li>
+</ul>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">You selected red.</div>
+  <div *ngSwitchCase="'green'">You selected green.</div>
+  <div *ngSwitchDefault>You selected another color.</div>
+</div>
+
+<div [ngSwitch]="selectedView">
+  <div *ngSwitchCase="'view1'">
+    Home 
+    <br> 
+    <button (click)="selectView('view2')">Next</button>
+  </div>
+  <div *ngSwitchCase="'view2'">
+    About 
+    <br> 
+    <button (click)="selectView('view1')">Previous</button>
+    <button (click)="selectView('view3')">Next</button>
+  </div>
+  <div *ngSwitchCase="'view3'">
+    Contact
+    <br> 
+    <button (click)="selectView('view2')">Previous</button>
+  </div>
+</div>
+
+<ul>
+  <li *ngFor="let product of products; trackBy: trackByProduct">
+    {{ product.name }}
+    <ul>
+      <li *ngFor="let variant of product.variants; trackBy: trackByVariant">
+        {{ variant.color }} - {{ variant.size }} - {{ variant.price }}
+      </li>
+    </ul>
+  </li>
+</ul>
