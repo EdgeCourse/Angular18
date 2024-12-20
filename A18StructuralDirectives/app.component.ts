@@ -14,7 +14,7 @@ export class AppComponent {
   isLoggedIn = true;
   username = 'John Smith';
   topics = ['Components', 'Directives', 'Pipes', 'Routes', 'Services'];
-  color = 'red';
+  color = 'green';
 
   logout() {
     this.isLoggedIn = false;
@@ -41,5 +41,9 @@ Performance Optimization: By using trackBy for both levels of the nested structu
   trackByVariant(index: number, variant: Variant): number {
     return variant.id;
   }
+
+
+
+  
 }
 

@@ -1,0 +1,12 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name">
+
+  <div formArrayName="hobbies">
+    <div *ngFor="let hobby of myForm.get('hobbies')?.controls; let i = index">
+      <input [formControlName]="i">
+      <button (click)="addHobby()">Add Hobby</button>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>

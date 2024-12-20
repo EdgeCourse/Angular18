@@ -1,0 +1,20 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name">
+
+  <!--
+The Validators.required validator is applied to the name FormControl.
+This validator checks if the input field is empty.
+If the field is empty, the validator adds an error to the FormControl.
+  
+The get() method is a part of the FormGroup class in Angular's reactive forms module. It's used to access a specific form control within a FormGroup by its name
+-->
+  <div *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched">
+    <span *ngIf="myForm.get('name')?.errors?.['required']">Name is required</span>
+  </div>
+
+<!--specifically calls the tooShort error we set-->
+  <div *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched && myForm.get('name')?.errors?.['tooShort']">
+    Name must be at least 5 characters long.
+  </div>
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>
