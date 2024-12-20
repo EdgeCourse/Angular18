@@ -30,4 +30,8 @@ export class AppComponent {
       email: ['', Validators.email]
     });
   }
+    onSubmit() {
+    // Implement the logic for your form submission here
+    console.log('Form submitted!'); 
+  }
 }
