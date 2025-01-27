@@ -1,0 +1,97 @@
+//const and let
+
+let name = 'Alice'; // Variable declared with 'let' can be reassigned
+name = 'Bob'; 
+console.log(name); // Output: Bob
+
+const age = 30; // Variable declared with 'const' cannot be reassigned
+// age = 31; // This will throw an error
+
+console.log(age); // Output: 30
+
+//template literals
+
+const firstName = 'John';
+const lastName = 'Doe';
+
+const fullName = `${firstName} ${lastName}`; 
+console.log(fullName); // Output: John Doe
+
+const greeting = `Hello, ${firstName}!`;
+console.log(greeting); // Output: Hello, John!
+
+//arrow functions
+
+const square = (x) => x * x;
+console.log(square(5)); // Output: 25
+
+const greet = () => {
+  console.log('Hello!');
+};
+greet(); // Output: Hello!
+
+//default parameters 
+
+const greetUser = (name = 'Guest') => {
+    console.log(`Hello, ${name}!`);
+  };
+  
+  greetUser(); // Output: Hello, Guest!
+  greetUser('Alice'); // Output: Hello, Alice!
+
+//destructuring
+
+const person = { name: 'Jane', age: 25 };
+
+const { name: personName, age } = person; 
+console.log(personName); // Output: Jane
+console.log(age);      // Output: 25
+
+const numbers = [1, 2, 3];
+const [first, second, third] = numbers;
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(third); // Output: 3
+
+//classes
+
+class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+  
+    speak() {
+      console.log('Generic animal sound');
+    }
+  }
+  
+  class Dog extends Animal {
+    constructor(name, breed) {
+      super(name); // Call the parent class constructor
+      this.breed = breed;
+    }
+  
+    speak() {
+      console.log('Woof!');
+    }
+  }
+  
+  const myDog = new Dog('Buddy', 'Golden Retriever');
+  myDog.speak(); // Output: Woof!
+
+  //spread and rest
+  const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4, 5]; // Spread operator
+console.log(newNumbers); // Output: [1, 2, 3, 4, 5]
+
+function sum(...args) { // Rest operator
+  let total = 0;
+  for (const num of args) {
+    total += num;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3)); // Output: 6
+
+
