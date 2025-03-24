@@ -1,0 +1,3 @@
+<h1>Angular 18 Input and Output Demo</h1>
+<app-counter [count]="parentCount" (countChange)="handleCountChange($event)"></app-counter>
+<p>Parent received count: {{ parentCount }}</p>
