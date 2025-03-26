@@ -1,0 +1,13 @@
+<div class="quiz" *ngIf="questions.length">
+    <h2>Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</h2>
+    <p>{{ questions[currentQuestionIndex]?.question }}</p>
+    <ul>
+      <li *ngFor="let option of questions[currentQuestionIndex]?.options"
+          [class.selected]="selectedAnswer === option"
+          (click)="selectAnswer(option)">
+        {{ option }}
+      </li>
+    </ul>
+    <button [disabled]="!selectedAnswer" (click)="nextQuestion()">Next</button>
+  </div>
+  
