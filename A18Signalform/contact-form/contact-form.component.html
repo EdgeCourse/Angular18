@@ -1,0 +1,72 @@
+<h2>Contact Us</h2>
+
+<form (submit)="submit(); $event.preventDefault();">
+  <!-- Name -->
+  <label>
+    Name:
+    <input
+      type="text"
+      #nameInput
+      [value]="name()"
+      (input)="name.set(nameInput.value)"
+    />
+  </label>
+  <div class="error" *ngIf="nameError()">{{ nameError() }}</div>
+
+  <!-- Email -->
+  <label>
+    Email:
+    <input
+      type="email"
+      #emailInput
+      [value]="email()"
+      (input)="email.set(emailInput.value)"
+    />
+  </label>
+  <div class="error" *ngIf="emailError()">{{ emailError() }}</div>
+
+  <!-- Message -->
+  <label>
+    Message:
+    <textarea
+      #messageInput
+      [value]="message()"
+      (input)="message.set(messageInput.value)"
+    ></textarea>
+  </label>
+  <div class="error" *ngIf="messageError()">{{ messageError() }}</div>
+
+  <button type="submit" [disabled]="!isFormValid()">Submit</button>
+</form>
+<!--
+    <h2>Contact Us</h2>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label>
+    Name:
+    <input formControlName="name" />
+  </label>
+  <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+    Name is required.
+  </div>
+
+  <label>
+    Email:
+    <input formControlName="email" />
+  </label>
+  <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+    Valid email is required.
+  </div>
+
+  <label>
+    Message:
+    <textarea formControlName="message"></textarea>
+  </label>
+  <div *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
+    Message is required.
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
+
+-->
