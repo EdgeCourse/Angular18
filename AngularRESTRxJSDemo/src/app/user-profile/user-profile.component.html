@@ -1,0 +1,15 @@
+<h2>User Profile</h2>
+
+<div *ngIf="user">
+  <p><strong>Name:</strong> {{ user.name }}</p>
+  <p><strong>Status:</strong> {{ user.active ? 'Active' : 'Inactive' }}</p>
+
+  <h3>Posts</h3>
+  <ul>
+    <li *ngFor="let post of posts">{{ post.title }}</li>
+  </ul>
+</div>
+
+<div *ngIf="!user">
+  Loading user profile...
+</div>

@@ -1,0 +1,6 @@
+<div *ngIf="result$ | async as result">
+  <h2>Quiz Result</h2>
+  <p>Your Score: {{ result.score }}</p>
+  <p>Total Questions: {{ result.total }}</p>
+  <a routerLink="/quiz">Try Again</a>
+</div>

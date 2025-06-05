@@ -1,0 +1,11 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Angular?",
+      "options": ["A front-end framework", "A database", "A design system", "A backend language"],
+      "answer": "A front-end framework"
+    }
+  
+  ]
+}

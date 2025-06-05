@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "AJ",
+      "active": true
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "active": true
+    },
+    {
+      "id": "3",
+      "name": "Charlie",
+      "active": false
+    }
+  ],
+  "metrics": [
+    {
+      "id": "1",
+      "status": "running"
+    },
+    {
+      "id": "2",
+      "status": "complete"
+    }
+  ],
+  "forms": [],
+  "activity": [
+    {
+      "id": "99f0",
+      "actions": 2
+    },
+    {
+      "id": "c81b",
+      "actions": 5
+    },
+    {
+      "id": "4b6e",
+      "actions": 7
+    },
+    {
+      "id": "eb57",
+      "actions": 6
+    },
+    {
+      "id": "ad9e",
+      "actions": 3
+    },
+    {
+      "id": "0763",
+      "actions": 1
+    },
+    {
+      "id": "9dfe",
+      "actions": 13
+    },
+    {
+      "id": "9b99",
+      "actions": 4
+    },
+    {
+      "id": "2e11",
+      "actions": 7
+    },
+    {
+      "id": "5ec7",
+      "actions": 10
+    },
+    {
+      "id": "748a",
+      "actions": 1
+    },
+    {
+      "id": "56f9",
+      "actions": 1
+    },
+    {
+      "id": "18a7",
+      "actions": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "AJ's Post"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "title": "Another Post by AJ"
+    }
+  ],
+  "profile": {
+    "name": "aj",
+    "email": "aj@"
+  }
+}
