@@ -1,0 +1,8 @@
+<div *ngIf="result() as res">
+  <h2>Your Score: {{ res.score }} / {{ res.total }}</h2>
+  <p *ngIf="res.score === res.total">Perfect score!</p>
+  <p *ngIf="res.score < res.total && res.score > 0">Good job!</p>
+  <p *ngIf="res.score === 0">Better luck next time!</p>
+  <button routerLink="/quiz" (click)="quizStore.reset()">Try Again</button>
+</div>
+

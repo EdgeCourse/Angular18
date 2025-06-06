@@ -1,0 +1,11 @@
+<div *ngIf="currentQuestion() as question">
+  <h2>{{ question.question }}</h2>
+  <ul>
+    <li *ngFor="let option of question.options"
+        (click)="selectAnswer(option)"
+        [class.selected]="option === quizStore.selectedAnswer()">
+      {{ option }}
+    </li>
+  </ul>
+  <button (click)="nextQuestion()">Next</button>
+</div>
