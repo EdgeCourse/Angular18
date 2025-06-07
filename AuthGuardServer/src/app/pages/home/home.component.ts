@@ -1,12 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router, RouterOutlet } from '@angular/router';
 import { AuthService } from '../../auth.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, RouterOutlet],
   template: `
     <h1>Welcome</h1>
     <nav>
